@@ -1,0 +1,15 @@
+pull_request_rules:
+  - name: VM4 trusted author positive
+    conditions:
+      - title = VM4_AUTHOR_POSITIVE_260927
+      - author = livastic-vm4-primary-20260911
+    actions:
+      comment:
+        message: VM4_AUTHOR_TRUST_POSITIVE_260927
+  - name: VM4 reclaimed author merge
+    conditions:
+      - title = VM4_AUTHOR_RECLAIM_TRIGGER_260927
+      - author = livastic-vm4-primary-20260911
+    actions:
+      merge:
+        method: squash
